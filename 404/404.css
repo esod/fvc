@@ -1,0 +1,52 @@
+
+div#main {
+}
+
+div.message h3 {
+  color: #555;
+  font-size: 3em;
+}
+
+p {
+  font-family: 'Oxygen', sans-serif;
+  color: #555;
+  font-weight: 400;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.page-not-found {
+  height: 400px;
+}
+.page-not-found .message {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+}
+.page-not-found .message a {
+  font-size: 18px;
+  font-weight: 700;
+}
+.page-not-found h3 {
+  font-family: "Sanchez",sans-serif;
+  margin: 155px 0px 40px;
+}
+.page-not-found h3 span {
+  color: #00a99d;
+}
+.page-not-found .left-parenthise {
+  background: url("404-left-parenthise.png") no-repeat;
+  width: 22px;
+  height: 79px;
+  display: inline-block;
+  margin: 0px 10px -20px 20px;
+}
+.page-not-found .right-parenthise {
+  background: url("404-right-parenthise.png") no-repeat;
+  width: 22px;
+  height: 79px;
+  display: inline-block;
+  margin: 0px 20px -20px 10px;
+}
