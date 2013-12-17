@@ -198,7 +198,7 @@
       24 Hours a Day, Seven Days a Week&nbsp;&bull;&nbsp;Proudly Serving the Nation<br>
       Free 30-Minute Coaching Session Available&nbsp;&bull;&nbsp;Member of the International Coach Federation and its New Jersey Affiliate<br>
     <div class="copyright-wrapper">
-      <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print $site_name; ?> </p> <p class="credits"> <?php print t('Toll Free: (877) 781-3782'); ?></p>
+      <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print $site_name; ?> </p> <p class="credits"> <?php print t('Toll Free: 1-855-441-8963'); ?></p>
       <div class="clear"></div>
       <p class="copyright second-line"><?php print t('Hackensack, NJ 07601-2589'); ?></p>
       <div class="clear"></div>
