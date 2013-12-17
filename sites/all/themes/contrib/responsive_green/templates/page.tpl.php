@@ -100,9 +100,10 @@
       <div class="flexslider-container">
         <div id="single-post-slider" class="flexslider">
           <ul class="slides">
-            <li class="slide"><img src="<?php print $img1;?>"alt="Slide1"/></li>
-            <li class="slide"><img src="<?php print $img2;?>"alt="Slide2"/></li>
-            <li class="slide"><img src="<?php print $img3;?>" alt="Slide3"/></li>
+            <li class="slide"><img src="<?php print $img1;?>"alt="Road Closed Ahead"/></li>
+            <li class="slide"><img src="<?php print $img2;?>"alt="Life Reimagined"/></li>
+            <li class="slide"><img src="<?php print $img3;?>" alt="Vision to LIve Different"/></li>
+            <li class="slide"><img src="<?php print $img4;?>" alt="Steps to Setting Goals"/></li>
           </ul><!-- /slides -->
         </div><!-- /flexslider -->
       </div>

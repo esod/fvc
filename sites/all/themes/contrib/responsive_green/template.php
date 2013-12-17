@@ -77,8 +77,9 @@ function responsive_green_preprocess_page(&$vars) {
   $vars['theme_path_social'] = base_path() . drupal_get_path('theme', 'responsive_green');
   $vars['display'] = theme_get_setting('display', 'responsive_green');
   $vars['img1'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/road-closed-ahead-lo.png';
-  $vars['img2'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/3300cc.png';
-  $vars['img3'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/9900cc.png';
+  $vars['img2'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/lifereimagined.jpg';
+  $vars['img3'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/vision-life-different.jpg';
+  $vars['img4'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/steps-to-setting-goals.jpg';
 }
 /**
  * Add Google Fonts.
