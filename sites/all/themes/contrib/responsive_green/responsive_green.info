@@ -10,8 +10,8 @@ stylesheets[all][] = css/media.css
 
 ; SCRIPTS
 ;----------------------------------------------------
-scripts[] = js/menu.js
 scripts[] = js/flexslider-min.js
+scripts[] = js/menu.js
 scripts[] = js/slide.js
 
 ; REGIONS
@@ -47,15 +47,6 @@ settings[display]      = 1
 settings[twitter]      = "https://twitter.com/LynnZimmering"
 settings[facebook]     = "http://www.facebook.com/lynn.zimmering"
 settings[linkedin]     = "http://in.linkedin.com/in/lynnzimmering"
-
-settings[slideshow_js]= 1
-settings[slideshow_effect]='slide'
-settings[slideshow_effect_time]='5'
-settings[slideshow_random]= 0
-settings[slideshow_controls]= 1
-settings[slideshow_pause]= 1
-settings[slideshow_touch]= 1
-
 
 ; Information added by drupal.org packaging script on 2013-07-01
 version = "7.x-1.2"

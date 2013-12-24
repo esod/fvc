@@ -100,9 +100,9 @@
       <div class="flexslider-container">
         <div id="single-post-slider" class="flexslider">
           <ul class="slides">
-            <li class="slide"><img src="<?php print $img1;?>"alt="Road Closed Ahead"/></li>
             <li class="slide"><img src="<?php print $img2;?>"alt="Life Reimagined"/></li>
-            <li class="slide"><img src="<?php print $img3;?>" alt="Vision to LIve Different"/></li>
+            <li class="slide"><img src="<?php print $img1;?>"alt="Road Closed Ahead"/></li>
+            <li class="slide"><img src="<?php print $img3;?>" alt="Vision to Live Different"/></li>
             <li class="slide"><img src="<?php print $img4;?>" alt="Steps to Setting Goals"/></li>
           </ul><!-- /slides -->
         </div><!-- /flexslider -->
@@ -200,7 +200,7 @@
     <div class="copyright-wrapper">
       <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print $site_name; ?> </p> <p class="credits"> <?php print t('Toll Free: 1-855-441-8963'); ?></p>
       <div class="clear"></div>
-      <p class="copyright second-line"><?php print t('Hackensack, NJ 07601-2589'); ?></p>
+      <p class="copyright second-line"><?php print t('Hackensack, NJ 07601-2589'); ?></p> <p class="credits"> <a href="mailto:lynn@forwardvisioncoaching.com" target="_self">lynn@forwardvisioncoaching.com</a></p>
       <div class="clear"></div>
     </div>
     </div>

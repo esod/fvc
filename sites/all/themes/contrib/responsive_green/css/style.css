@@ -1581,14 +1581,17 @@ blockquote {
   letter-spacing: 1px;
   padding: 0 0.5em 0 0.5em;
 }
+.footer-menu li a {
+  color: #999;
+}
 .footer-menu ul li.last {
   border-right: none;
 }
 .footer-menu ul li a:hover {
-  color: #999;
+  color: #00a99d;
 }
 .footer-menu li a.active {
-  color: #999;
+  color: #00a99d;
 }
 #footer {
   clear: both;
