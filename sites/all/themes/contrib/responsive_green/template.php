@@ -76,6 +76,7 @@ function responsive_green_preprocess_page(&$vars) {
   $vars['linkedin'] = theme_get_setting('linkedin', 'responsive_green');
   $vars['theme_path_social'] = base_path() . drupal_get_path('theme', 'responsive_green');
   $vars['display'] = theme_get_setting('display', 'responsive_green');
+  $vars['sdisplay'] = theme_get_setting('sdisplay', 'responsive_green');
   $vars['img1'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/road-closed-ahead-lo.png';
   $vars['img2'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/lifereimagined.jpg';
   $vars['img3'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/vision-life-different.jpg';

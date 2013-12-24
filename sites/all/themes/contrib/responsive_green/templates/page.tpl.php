@@ -96,18 +96,20 @@
 
 <div id="container">
   <?php if ($is_front): ?>
+    <?php if ($sdisplay): ?>
     <div id="home-slider">
-      <div class="flexslider-container">
-        <div id="single-post-slider" class="flexslider">
-          <ul class="slides">
-            <li class="slide"><img src="<?php print $img2;?>"alt="Life Reimagined"/></li>
-            <li class="slide"><img src="<?php print $img1;?>"alt="Road Closed Ahead"/></li>
-            <li class="slide"><img src="<?php print $img3;?>" alt="Vision to Live Different"/></li>
-            <li class="slide"><img src="<?php print $img4;?>" alt="Steps to Setting Goals"/></li>
-          </ul><!-- /slides -->
-        </div><!-- /flexslider -->
+        <div class="flexslider-container">
+          <div id="single-post-slider" class="flexslider">
+            <ul class="slides">
+              <li class="slide"><img src="<?php print $img2;?>"alt="Life Reimagined"/></li>
+              <li class="slide"><img src="<?php print $img1;?>"alt="Road Closed Ahead"/></li>
+              <li class="slide"><img src="<?php print $img3;?>" alt="Vision to Live Different"/></li>
+              <li class="slide"><img src="<?php print $img4;?>" alt="Steps to Setting Goals"/></li>
+            </ul><!-- /slides -->
+          </div><!-- /flexslider -->
+        </div>
       </div>
-    </div>
+    <?php endif; ?>
     <?php if (!empty($page['top_first'])): $num1 = 1;  endif; ?>
     <?php if (!empty($page['top_second'])): $num2 = 1;  endif; ?>
     <?php if (!empty($page['top_third'])): $num3 = 1;  endif; ?>

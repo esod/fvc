@@ -1,5 +1,5 @@
 name = Responsive Green
-description = A Responsive Corporate theme.<br/> Developed by <a href="http://www.about.me/ankithinglajia">Ankit Hinglajia.</a>
+description = A Responsive theme.
 core = 7.x
 engine = phptemplate
 
@@ -44,6 +44,7 @@ features[] = secondary_menu
 ;----------------------------------------------------
 settings[breadcrumbs]  = 1
 settings[display]      = 1
+settings[sdisplay]      = 1
 settings[twitter]      = "https://twitter.com/LynnZimmering"
 settings[facebook]     = "http://www.facebook.com/lynn.zimmering"
 settings[linkedin]     = "http://in.linkedin.com/in/lynnzimmering"

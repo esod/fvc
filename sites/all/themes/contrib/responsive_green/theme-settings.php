@@ -20,19 +20,32 @@ function responsive_green_form_system_theme_settings_alter(&$form, &$form_state)
     '#type' => 'vertical_tabs',
   );
   
+  $form['responsive_green_settings']['tabs']['slideshow'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Slideshow Visiblity'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['responsive_green_settings']['tabs']['slideshow']['sdisplay'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show Slideshow'),
+    '#default_value' => theme_get_setting('sdisplay', 'responsive_green'),
+    '#description'   => t("Check this option to show the slideshow on the home page. Uncheck to hide."),
+  );
+  
   $form['responsive_green_settings']['tabs']['breadcrumb'] = array(
     '#type' => 'fieldset',
     '#title' => t('Breadcrumbs'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
   );
-
   $form['responsive_green_settings']['tabs']['breadcrumb']['breadcrumbs'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show breadcrumbs in a page'),
     '#default_value' => theme_get_setting('breadcrumbs', 'responsive_green'),
     '#description'   => t("Check this option to show breadcrumbs in page. Uncheck to hide."),
   );
+  
   $form['responsive_green_settings']['tabs']['social'] = array(
     '#type' => 'fieldset',
     '#title' => t('Social Icon'),
