@@ -12,7 +12,7 @@ attach: function (context, settings) {
       slideshow: true,
       controlNav: true,
       smoothHeight: true,
-      slideshowSpeed: 2000,
+      slideshowSpeed: 5000,
       direction: 'horizontal',
       start: function(slider) {
         slider.container.click(function(e) {
