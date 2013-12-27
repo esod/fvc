@@ -450,7 +450,7 @@ audio {
 }
 
 #socialbar .social .fb a {
-  background: url("../images/fb.png") no-repeat scroll center center transparent;
+  background: url("../images/fb.gif") no-repeat scroll center center transparent;
   display: inline-block;
   height: 64px;
   padding: 0 5px 0 0;
@@ -463,7 +463,7 @@ audio {
 }
 
 #socialbar .social .tw a {
-  background: url("../images/tw.png") no-repeat scroll center center transparent;
+  background: url("../images/tw.gif") no-repeat scroll center center transparent;
   display: inline-block;
   height: 64px;
   padding: 0 5px 0 0;
@@ -476,7 +476,7 @@ audio {
 }
 
 #socialbar .social .ln a {
-  background: url("../images/in.png") no-repeat scroll center center transparent;
+  background: url("../images/in.gif") no-repeat scroll center center transparent;
   display: inline-block;
   height: 64px;
   padding: 0 5px 0 0;

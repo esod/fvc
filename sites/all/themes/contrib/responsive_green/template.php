@@ -118,6 +118,32 @@ if (!(theme_get_setting('theme_color','responsive_green') == 'default')):
 endif;
 
 /**
+ * Add files for custom buttons.
+ */
+if (!(theme_get_setting('button_color','responsive_green') == '')):
+	drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/buttons.css');
+endif;
+
+function responsive_green_button($variables) {
+	$button_color = theme_get_setting('button_color','responsive_green');
+	if($button_color == '') {
+		$button_classes = '';
+	} else {
+		$button_classes = ' button small round ';
+	}	
+	$element = $variables['element'];
+	$element['#attributes']['type'] = 'submit';
+	element_set_attributes($element, array('id', 'name', 'value'));
+
+	$element['#attributes']['class'][] = 'form-' . $element['#button_type'] . $button_classes . $button_color;
+	if (!empty($element['#attributes']['disabled'])) {
+	$element['#attributes']['class'][] = 'form-button-disabled';
+	}
+
+	return '<input' . drupal_attributes($element['#attributes']) . ' />';
+}
+
+/**
  * Add Google Fonts.
  */
 function responsive_green_preprocess_html(&$variables) {
