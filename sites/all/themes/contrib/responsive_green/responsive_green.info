@@ -58,7 +58,7 @@ settings[slideshow_controls]= 1
 settings[slideshow_pause]= 1
 settings[slideshow_touch]= 1
 settings[theme_color]= 'default'
-settings[button_color]= 'steel_blue'
+settings[button_color]= 'default'
 
 
 

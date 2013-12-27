@@ -59,6 +59,7 @@ function responsive_green_form_system_theme_settings_alter(&$form, &$form_state)
     '#description'   => t('From the drop-down menu, select the color scheme you prefer.'),
     '#default_value' => theme_get_setting('button_color','responsive_green'),
     '#options' => array(
+      'default' => t('Default'),
       'blue' => t('Blue'),
       'gray' => t('Gray'),
       'orange' => t('Orange'),
