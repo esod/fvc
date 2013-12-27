@@ -107,6 +107,16 @@ function responsive_green_preprocess_page(&$vars) {
   ), 'setting');
 
 }
+
+/**
+ * Add styles for theme color schemes.
+ */
+if (!(theme_get_setting('theme_color','responsive_green') == 'default')):
+	$theme_color = theme_get_setting('theme_color','responsive_green');
+	drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/color-schemes/' . $theme_color . '/style.css', array('group' => CSS_THEME, 'weight' => 120));
+	drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/color-schemes/' . $theme_color . '/media.css', array('group' => CSS_THEME, 'weight' => 121));
+endif;
+
 /**
  * Add Google Fonts.
  */

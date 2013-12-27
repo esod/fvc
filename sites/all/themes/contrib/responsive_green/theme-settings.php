@@ -19,7 +19,66 @@ function responsive_green_form_system_theme_settings_alter(&$form, &$form_state)
   $form['responsive_green_settings']['tabs'] = array(
     '#type' => 'vertical_tabs',
   );
-  
+
+  $form['responsive_green_settings']['tabs']['looknfeel'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Look and Feel'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  $form['responsive_green_settings']['tabs']['looknfeel']['theme_colors'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Color Schemes'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['responsive_green_settings']['tabs']['looknfeel']['theme_colors']['theme_color'] = array(
+    '#type' => 'select',
+    '#title' => t('Colors'),
+    '#description'   => t('From the drop-down menu, select the color scheme you prefer.'),
+    '#default_value' => theme_get_setting('theme_color','responsive_green'),
+    '#options' => array(
+      'default' => t('Default'),
+      'blue' => t('Blue'),
+      'gray' => t('Gray'),
+      'orange' => t('Orange'),
+      'purple' => t('Purple'),
+      'red' => t('Red'),
+      'yellow' => t('Yellow'),
+    ),
+  );
+  $form['responsive_green_settings']['tabs']['looknfeel']['buttons'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Buttons'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['responsive_green_settings']['tabs']['looknfeel']['buttons']['button_color'] = array(
+    '#type' => 'select',
+    '#title' => t('Colors'),
+    '#description'   => t('From the drop-down menu, select the color scheme you prefer.'),
+    '#default_value' => theme_get_setting('button_color','responsive_green'),
+    '#options' => array(
+      'blue' => t('Blue'),
+      'steel_blue' => t('Steel Blue'),
+      'sea_blue' => t('Sea Blue'),
+      'green' => t('Green'),
+      'dark_green' => t('Dark Green'),
+      'fresh_green' => t('Fresh green'),
+      'earth_green' => t('Earth green'),
+      'red' => t('Red'),
+      'light_red' => t('Light red'),
+      'orange' => t('Orange'),
+      'purple' => t('Purple'),
+      'lavander' => t('Lavander'),
+      'grey' => t('Grey'),
+      'light_grey' => t('Light Grey'),
+      'dark_grey' => t('Dark Grey'),
+      'black' => t('Black'),
+      '' => t('Without Style'),
+    ),
+  );
+
   $form['responsive_green_settings']['tabs']['slideshow'] = array(
     '#type' => 'fieldset',
     '#title' => t('Front-page Slideshow'),
