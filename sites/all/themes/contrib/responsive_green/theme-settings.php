@@ -22,7 +22,7 @@ function responsive_green_form_system_theme_settings_alter(&$form, &$form_state)
   
   $form['responsive_green_settings']['tabs']['slideshow'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Slideshow Visiblity'),
+    '#title' => t('Front-page Slideshow'),
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
   );
@@ -32,7 +32,58 @@ function responsive_green_form_system_theme_settings_alter(&$form, &$form_state)
     '#default_value' => theme_get_setting('sdisplay', 'responsive_green'),
     '#description'   => t("Check this option to show the slideshow on the home page. Uncheck to hide."),
   );
-  
+  // TODO
+  //$form['responsive_green_settings']['tabs']['slideshow']['slideshow_effect'] = array(
+  //    '#type' => 'select',
+  //    '#title' => t('Effects'),
+  //    '#description'   => t('From the drop-down menu, select the slideshow effect you prefer.'),
+  //    '#default_value' => theme_get_setting('slideshow_effect','simplecorp'),
+  //    '#options' => array(
+  //      'slide' => t('Slide'),
+  //      'fade' => t('Fade'),
+  //    ),
+  //);
+
+  $form['responsive_green_settings']['tabs']['slideshow']['slideshow_direction'] = array(
+      '#type' => 'select',
+      '#title' => t('Direction'),
+      '#description'   => t('From the drop-down menu, select the slideshow direction you prefer.'),
+      '#default_value' => theme_get_setting('slideshow_direction','responsive_green'),
+      '#options' => array(
+        'horizontal' => t('Horizontal'),
+        'vertical' => t('Vertical'),
+      ),
+  );
+
+  $form['responsive_green_settings']['tabs']['slideshow']['slideshow_effect_time'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Effect duration (sec)'),
+      '#default_value' => theme_get_setting('slideshow_effect_time','responsive_green'),
+  );
+
+  $form['responsive_green_settings']['tabs']['slideshow']['slideshow_random'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Randomize slide order'),
+      '#default_value' => theme_get_setting('slideshow_random','responsive_green'),
+  );
+
+  $form['responsive_green_settings']['tabs']['slideshow']['slideshow_pause'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Pause Slideshow on hover'),
+      '#default_value' => theme_get_setting('slideshow_pause','responsive_green'),
+  );
+
+  $form['responsive_green_settings']['tabs']['slideshow']['slideshow_controls'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Display Slideshow controls'),
+      '#default_value' => theme_get_setting('slideshow_controls','responsive_green'),
+  );
+
+  $form['responsive_green_settings']['tabs']['slideshow']['slideshow_touch'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Allow touch swipe navigation'),
+      '#default_value' => theme_get_setting('slideshow_touch','responsive_green'),
+  );
   $form['responsive_green_settings']['tabs']['breadcrumb'] = array(
     '#type' => 'fieldset',
     '#title' => t('Breadcrumbs'),

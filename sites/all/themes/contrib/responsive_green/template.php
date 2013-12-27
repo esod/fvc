@@ -77,10 +77,35 @@ function responsive_green_preprocess_page(&$vars) {
   $vars['theme_path_social'] = base_path() . drupal_get_path('theme', 'responsive_green');
   $vars['display'] = theme_get_setting('display', 'responsive_green');
   $vars['sdisplay'] = theme_get_setting('sdisplay', 'responsive_green');
+
+  //Initialize slideshow using theme settings
+  //$vars['effect'] = theme_get_setting('slideshow_effect', 'responsive_green'); //Wait for fade bug to be resolved
+  $vars['slideshow_direction'] = theme_get_setting('slideshow_direction','responsive_green');
+  $vars['effect_time'] = theme_get_setting('slideshow_effect_time','responsive_green')*1000;
+  $vars['slideshow_controls'] = theme_get_setting('slideshow_controls','responsive_green');
+  $vars['slideshow_random'] = theme_get_setting('slideshow_random','responsive_green');
+  $vars['slideshow_pause'] = theme_get_setting('slideshow_pause','responsive_green');
+  $vars['slideshow_touch'] = theme_get_setting('slideshow_touch','responsive_green');
+
+  // The images. TODO: move into a custom module
   $vars['img1'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/road-closed-ahead-lo.png';
   $vars['img2'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/lifereimagined.jpg';
   $vars['img3'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/vision-life-different.jpg';
   $vars['img4'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/steps-to-setting-goals.jpg';
+  
+  // Pass the slideshow settings to Drupal.settings
+  drupal_add_js(array(
+    'custom_slideshow' => array(
+      //'effect' => $effect, // Wait for fade bug to be resolved
+      'slideshow_direction' => $vars['slideshow_direction'],
+      'effect_time' => $vars['effect_time'],
+      'slideshow_controls' => $vars['slideshow_controls'],
+      'slideshow_random' => $vars['slideshow_random'],
+      'slideshow_pause' => $vars['slideshow_pause'],
+      'slideshow_touch' => $vars['slideshow_touch']
+    )
+  ), 'setting');
+
 }
 /**
  * Add Google Fonts.
