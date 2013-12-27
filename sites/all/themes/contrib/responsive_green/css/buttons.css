@@ -25,10 +25,6 @@
     padding: 11px 10px 0;
     background-position:0 -28px;
 }
-.button_link:hover{text-decoration:none !important;}
-.button_link{
-	text-shadow:0 1px 0 rgba(0, 0, 0, 0.4) !important;
-}
 .button.small {
 	padding: 7px 12px;
 }
@@ -55,57 +51,49 @@ input[type="submit"] {
 /* New S5 buttons styles */
 
 .blue{
-    background-image: url(../images/buttons/s5_buttons/blue.png) !important;
+    background-color: #345CAA !important;
     color:#fff !important;
-    text-shadow:0 -1px 0 #888 !important;
     border:1px solid #003960 !important;
 }
 
 .gray{
-    background-image: url(../images/buttons/s5_buttons/dark_gray.png) !important;
+    background-color: #657783 !important;
     color:#fff !important;
-    text-shadow:0 -1px 0 #888 !important;
     border:1px solid #909090 !important;
 }
 
 .orange{
-    background-image: url(../images/buttons/s5_buttons/orange.png) !important;
+    background-color: #CD5234 !important;
     color:#fff !important;
-    text-shadow:0 -1px 0 #888 !important;
     border:1px solid #A32E01 !important;
 }
 
 .purple{
-    background-image: url(../images/buttons/s5_buttons/purple.png) !important;
+    background-color: #B576AD !important;
     color:#fff !important;
-    text-shadow:0 -1px 0 #888 !important;
     border:1px solid #A20D75 !important;
 }
 
 .red{
-    background-image: url(../images/buttons/s5_buttons/red.png) !important;
+    background-color: #E64135!important;
     color:#fff !important;
-    text-shadow:0 -1px 0 #888 !important;
     border:1px solid #930000 !important;
 }
 
 .yellow{
-    background-image: url(../images/buttons/s5_buttons/yellow.png) !important;
-    color:#fff !important;
-    text-shadow:0 -1px 0 #888 !important;
-    border:1px solid #71711A !important;
+    background-color: #FFCC00 !important;
+    color:#111 !important;
+    border:1px solid #f5c402 !important;
 }
 
 .green{
-    background-image: url(../images/buttons/s5_buttons/earth_green.png) !important;
+    background-color: #00A99D !important;
     color:#fff !important;
-    text-shadow:0 -1px 0 #888 !important;
     border:1px solid #008800 !important;
 }
 
 .black{
-    background-image: url(../images/buttons/s5_buttons/black.png) !important;
+    background-color: #111111 !important;
     color:#fff !important;
-    text-shadow:0 -1px 0 #888 !important;
     border:1px solid #000000 !important;
 }
