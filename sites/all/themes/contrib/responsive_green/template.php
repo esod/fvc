@@ -128,27 +128,30 @@ function responsive_green_button($variables) {
 }
 
 /**
- * Add Google Fonts.
+ * Override or insert variables for the page templates.
  */
 function responsive_green_preprocess_html(&$variables) {
+  // Add the Google fonts.
   drupal_add_css('http://fonts.googleapis.com/css?family=Vollkorn:400italic,400,700', array('type' => 'external'));
   drupal_add_css('http://fonts.googleapis.com/css?family=Oxygen:400,700', array('type' => 'external'));
-
-  /**
-   * Add styles for theme color schemes.
-   */
-  if (!(theme_get_setting('theme_color','responsive_green') == 'default')):
+  
+  // Add the default style sheets
+  drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/style.css', array('group' => CSS_THEME, 'weight' => 120));
+  drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/media.css', array('group' => CSS_THEME, 'weight' => 121));
+  
+  // Add styles for theme color schemes.
+  if (!(theme_get_setting('theme_color','responsive_green') == '')) {
     $theme_color = theme_get_setting('theme_color','responsive_green');
-    drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/color-schemes/' . $theme_color . '/style.css', array('group' => CSS_THEME, 'weight' => 120));
-    drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/color-schemes/' . $theme_color . '/media.css', array('group' => CSS_THEME, 'weight' => 121));
-  endif;
+    drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/color-schemes/' . $theme_color . '/' . $theme_color . '-style.css', array('group' => CSS_THEME, 'weight' => 122));
+    drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/color-schemes/' . $theme_color . '/' . $theme_color . '-media.css', array('group' => CSS_THEME, 'weight' => 123));
+  }
   
   /**
    * Add files for custom buttons.
    */
-  if (!(theme_get_setting('button_color','responsive_green') == '')):
-    drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/buttons.css', array('group' => CSS_THEME, 'weight' => 122));
-  endif;
+  if (!(theme_get_setting('button_color','responsive_green') == '')) {
+    drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/buttons.css', array('group' => CSS_THEME, 'weight' => 124));
+  }
 }
 
 /**
