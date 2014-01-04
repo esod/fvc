@@ -76,6 +76,11 @@ function fvc_blog_posts_filter_default_formats() {
           'link' => 0,
         ),
       ),
+      'media_filter' => array(
+        'weight' => 2,
+        'status' => 1,
+        'settings' => array(),
+      ),
     ),
   );
 

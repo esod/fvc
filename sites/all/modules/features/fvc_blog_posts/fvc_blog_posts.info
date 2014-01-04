@@ -10,6 +10,7 @@ dependencies[] = features
 dependencies[] = filter
 dependencies[] = image
 dependencies[] = invisimail
+dependencies[] = media
 dependencies[] = node
 dependencies[] = pathauto
 dependencies[] = strongarm

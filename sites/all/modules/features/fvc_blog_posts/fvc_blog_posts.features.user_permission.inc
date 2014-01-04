@@ -137,7 +137,6 @@ function fvc_blog_posts_user_default_permissions() {
     'name' => 'edit own comments',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
       'site administrator' => 'site administrator',
     ),
     'module' => 'comment',
@@ -168,7 +167,6 @@ function fvc_blog_posts_user_default_permissions() {
     'name' => 'skip comment approval',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
       'site administrator' => 'site administrator',
     ),
     'module' => 'comment',

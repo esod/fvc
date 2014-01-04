@@ -70,6 +70,7 @@ function fvc_blog_posts_wysiwyg_default_profiles() {
           'wordcount' => 1,
         ),
         'drupal' => array(
+          'media' => 1,
           'break' => 1,
         ),
       ),
