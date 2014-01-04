@@ -1,0 +1,13 @@
+name = FVC Toolbar
+description = Toolbar and Shortcuts
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = fvc_toolbar
+dependencies[] = features
+dependencies[] = shortcut
+dependencies[] = toolbar
+features[features_api][] = api:2
+features[user_permission][] = administer shortcuts
+features[user_permission][] = customize shortcut links
+features[user_permission][] = switch shortcut sets

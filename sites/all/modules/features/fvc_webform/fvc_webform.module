@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the FVC Webform feature.
+ */
+
+include_once 'fvc_webform.features.inc';
