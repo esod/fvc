@@ -1,16 +1,22 @@
 /* ---------------------------------------------------------------------- */
-/* Blue
+/* Purple
 /* 
-/* Menu color: #3A5CAA
+/* Menu color: #3A5CAA ;
 /* ---------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------- */
-/* Colors 
+/* COLORS 
 /* ---------------------------------------------------------------------- */
 
 a {
   color: #3A5CAA;
   text-decoration: none;
+}
+
+#site-title a,
+#site-description {
+  color: #3A5CAA;
+  font-weight: 300;
 }
 
 .menu_wrapper {
@@ -134,8 +140,13 @@ a {
   margin-bottom: 1px;
 }
 
+.links li a:hover {
+  background: #b45fa9;
+  color: #ddd;
+}
+
 .footer-menu ul li a:hover {
-  color: #3A5CAA;
+  color: #b45fa9;
 }
 .footer-menu li a.active {
   color: #3A5CAA;
@@ -166,4 +177,3 @@ q {
 #search-form input.form-submit {
   background: url("../../../images/search-button.png") no-repeat center top;
 }
-

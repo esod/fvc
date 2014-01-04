@@ -1,16 +1,22 @@
 /* ---------------------------------------------------------------------- */
-/* Gray
+/* Purple
 /* 
-/* Menu color: #65778C
+/* Menu color: #65778C ;
 /* ---------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------- */
-/* Colors 
+/* COLORS 
 /* ---------------------------------------------------------------------- */
 
 a {
   color: #65778C;
   text-decoration: none;
+}
+
+#site-title a,
+#site-description {
+  color: #65778C;
+  font-weight: 300;
 }
 
 .menu_wrapper {
@@ -134,8 +140,13 @@ a {
   margin-bottom: 1px;
 }
 
+.links li a:hover {
+  background: #b45fa9;
+  color: #ddd;
+}
+
 .footer-menu ul li a:hover {
-  color: #65778C;
+  color: #b45fa9;
 }
 .footer-menu li a.active {
   color: #65778C;
@@ -166,4 +177,3 @@ q {
 #search-form input.form-submit {
   background: url("../../../images/search-button.png") no-repeat center top;
 }
-
