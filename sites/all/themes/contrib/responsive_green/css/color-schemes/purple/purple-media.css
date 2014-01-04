@@ -39,14 +39,6 @@
   text-transform: capitalize;
 }
 
-#main-menu a:hover,
-#main-menu li > a.active,
-#main-menu li > a.active-trail {
-  background: none repeat scroll 0 0 #B576AD;
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
 .drop-down-toggle {
   display: none;
 }

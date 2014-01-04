@@ -1,16 +1,22 @@
 /* ---------------------------------------------------------------------- */
-/* Orange
+/* Purple
 /* 
-/* Menu color: #CB5234
+/* Menu color: #CB5234 ;
 /* ---------------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------------- */
-/* Colors 
+/* COLORS 
 /* ---------------------------------------------------------------------- */
 
 a {
   color: #CB5234;
   text-decoration: none;
+}
+
+#site-title a,
+#site-description {
+  color: #CB5234;
+  font-weight: 300;
 }
 
 .menu_wrapper {
@@ -34,7 +40,6 @@ a {
   clear: both;
   color: #CB5234;
   float: left;
-  font-family: Dancing script ,arial,serif;
   font-size: 20px;
   line-height: 100%;
   margin: 16px 0 0;
@@ -135,8 +140,13 @@ a {
   margin-bottom: 1px;
 }
 
+.links li a:hover {
+  background: #b45fa9;
+  color: #ddd;
+}
+
 .footer-menu ul li a:hover {
-  color: #CB5234;
+  color: #b45fa9;
 }
 .footer-menu li a.active {
   color: #CB5234;
@@ -167,4 +177,3 @@ q {
 #search-form input.form-submit {
   background: url("../../../images/search-button.png") no-repeat center top;
 }
-

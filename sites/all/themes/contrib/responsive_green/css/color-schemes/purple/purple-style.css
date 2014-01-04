@@ -13,6 +13,12 @@ a {
   text-decoration: none;
 }
 
+#site-title a,
+#site-description {
+  color: #B576AD;
+  font-weight: 300;
+}
+
 .menu_wrapper {
   background-color: #B576AD;
   border-bottom: 0 solid #B576AD;
@@ -34,7 +40,6 @@ a {
   clear: both;
   color: #B576AD;
   float: left;
-  font-family: Dancing script ,arial,serif;
   font-size: 20px;
   line-height: 100%;
   margin: 16px 0 0;
@@ -135,8 +140,13 @@ a {
   margin-bottom: 1px;
 }
 
+.links li a:hover {
+  background: #b45fa9;
+  color: #ddd;
+}
+
 .footer-menu ul li a:hover {
-  color: #B576AD;
+  color: #b45fa9;
 }
 .footer-menu li a.active {
   color: #B576AD;
