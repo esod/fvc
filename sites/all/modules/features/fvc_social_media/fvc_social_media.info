@@ -20,6 +20,7 @@ features[ctools][] = file_entity:file_default_displays:1
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[field_base][] = field_youtube_video
+features[field_instance][] = node-blog_post-field_youtube_video
 features[file_display][] = video__media_original__file_field_file_default
 features[file_display][] = video__media_original__file_field_file_rendered
 features[file_display][] = video__media_original__file_field_file_table
