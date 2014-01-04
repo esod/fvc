@@ -198,7 +198,7 @@
    <?php endif; ?>
     <div id="copyright">
       24 Hours a Day, Seven Days a Week&nbsp;&bull;&nbsp;Proudly Serving the Nation<br>
-      Free 30-Minute Coaching Session Available&nbsp;&bull;&nbsp;Member of the International Coach Federation and its New Jersey Affiliate<br>
+      Free 30-Minute Coaching Session Available<br>
     <div class="copyright-wrapper">
       <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print $site_name; ?> </p> <p class="credits"> <?php print t('Toll Free: 1-855-441-8963'); ?></p>
       <div class="clear"></div>

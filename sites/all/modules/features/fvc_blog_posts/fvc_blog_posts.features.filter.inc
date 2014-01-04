@@ -55,31 +55,31 @@ function fvc_blog_posts_filter_default_formats() {
     'status' => 1,
     'weight' => -10,
     'filters' => array(
+      'media_filter' => array(
+        'weight' => -50,
+        'status' => 1,
+        'settings' => array(),
+      ),
       'filter_url' => array(
-        'weight' => -47,
+        'weight' => -49,
         'status' => 1,
         'settings' => array(
           'filter_url_length' => 72,
         ),
       ),
       'filter_htmlcorrector' => array(
-        'weight' => -45,
+        'weight' => -48,
         'status' => 1,
         'settings' => array(),
       ),
       'invisimail_encode_html_entities' => array(
-        'weight' => -44,
+        'weight' => -47,
         'status' => 1,
         'settings' => array(
           'encoder' => 'html_entities',
           'chunk' => 0,
           'link' => 0,
         ),
-      ),
-      'media_filter' => array(
-        'weight' => 2,
-        'status' => 1,
-        'settings' => array(),
       ),
     ),
   );

@@ -15,6 +15,7 @@ function fvc_webform_user_default_permissions() {
     'name' => 'access all webform results',
     'roles' => array(
       'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
     ),
     'module' => 'webform',
   );
@@ -46,6 +47,7 @@ function fvc_webform_user_default_permissions() {
     'name' => 'access own webform results',
     'roles' => array(
       'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
     ),
     'module' => 'webform',
   );
@@ -55,6 +57,7 @@ function fvc_webform_user_default_permissions() {
     'name' => 'access own webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
     ),
     'module' => 'webform',
   );
@@ -83,7 +86,6 @@ function fvc_webform_user_default_permissions() {
     'name' => 'administer menu',
     'roles' => array(
       'administrator' => 'administrator',
-      'site administrator' => 'site administrator',
     ),
     'module' => 'menu',
   );
@@ -119,7 +121,9 @@ function fvc_webform_user_default_permissions() {
   // Exported permission: 'create webform content'.
   $permissions['create webform content'] = array(
     'name' => 'create webform content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -128,6 +132,7 @@ function fvc_webform_user_default_permissions() {
     'name' => 'delete all webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
     ),
     'module' => 'webform',
   );
@@ -135,14 +140,18 @@ function fvc_webform_user_default_permissions() {
   // Exported permission: 'delete any webform content'.
   $permissions['delete any webform content'] = array(
     'name' => 'delete any webform content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own webform content'.
   $permissions['delete own webform content'] = array(
     'name' => 'delete own webform content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -151,6 +160,7 @@ function fvc_webform_user_default_permissions() {
     'name' => 'delete own webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
     ),
     'module' => 'webform',
   );
@@ -168,7 +178,10 @@ function fvc_webform_user_default_permissions() {
   // Exported permission: 'delete terms in tags'.
   $permissions['delete terms in tags'] = array(
     'name' => 'delete terms in tags',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
+    ),
     'module' => 'taxonomy',
   );
 
@@ -177,6 +190,7 @@ function fvc_webform_user_default_permissions() {
     'name' => 'edit all webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
     ),
     'module' => 'webform',
   );
@@ -184,14 +198,18 @@ function fvc_webform_user_default_permissions() {
   // Exported permission: 'edit any webform content'.
   $permissions['edit any webform content'] = array(
     'name' => 'edit any webform content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit own webform content'.
   $permissions['edit own webform content'] = array(
     'name' => 'edit own webform content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -200,6 +218,7 @@ function fvc_webform_user_default_permissions() {
     'name' => 'edit own webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
     ),
     'module' => 'webform',
   );
@@ -207,7 +226,10 @@ function fvc_webform_user_default_permissions() {
   // Exported permission: 'edit terms in tags'.
   $permissions['edit terms in tags'] = array(
     'name' => 'edit terms in tags',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
+    ),
     'module' => 'taxonomy',
   );
 

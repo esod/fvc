@@ -108,7 +108,7 @@
     ?></div>
   <?php if (!empty($content['links'])): ?>
     <footer>
-      <?php print render($content['links']); ?>
+      <?php /*print render($content['links']);*/ ?>
     </footer>
   <?php endif; ?>
   <?php print render($content['comments']); ?>

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the FVC Social Media feature.
+ */
+
+include_once 'fvc_social_media.features.inc';
