@@ -65,6 +65,15 @@ function fvc_social_media_user_default_permissions() {
     'module' => 'styles_ui',
   );
 
+  // Exported permission: 'administer youtube'.
+  $permissions['administer youtube'] = array(
+    'name' => 'administer youtube',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'youtube',
+  );
+
   // Exported permission: 'bypass mollom protection'.
   $permissions['bypass mollom protection'] = array(
     'name' => 'bypass mollom protection',

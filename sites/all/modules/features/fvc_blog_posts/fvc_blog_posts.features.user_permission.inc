@@ -66,15 +66,6 @@ function fvc_blog_posts_user_default_permissions() {
     'module' => 'path',
   );
 
-  // Exported permission: 'administer youtube'.
-  $permissions['administer youtube'] = array(
-    'name' => 'administer youtube',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'youtube',
-  );
-
   // Exported permission: 'context ajax block access'.
   $permissions['context ajax block access'] = array(
     'name' => 'context ajax block access',
