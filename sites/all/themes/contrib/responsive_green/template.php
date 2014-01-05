@@ -88,7 +88,7 @@ function responsive_green_preprocess_page(&$vars) {
   $vars['slideshow_touch'] = theme_get_setting('slideshow_touch','responsive_green');
 
   // The images. TODO: move into a custom module
-  $vars['img1'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/road-closed-ahead-lo.png';
+  $vars['img1'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/road-closed-ahead-lo.jpg';
   $vars['img2'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/lifereimagined.jpg';
   $vars['img3'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/vision-life-different.jpg';
   $vars['img4'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/steps-to-setting-goals.jpg';
