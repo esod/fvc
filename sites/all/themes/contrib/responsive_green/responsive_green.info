@@ -10,9 +10,9 @@ stylesheets[all][] = css/media.css
 
 ; SCRIPTS
 ;----------------------------------------------------
-scripts[] = js/flexslider-min.js
+;scripts[] = js/flexslider-min.js
 scripts[] = js/menu.js
-scripts[] = js/slide.js
+;scripts[] = js/slide.js
 
 ; REGIONS
 ;----------------------------------------------------
