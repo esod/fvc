@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the FVC Blog Posts feature.
- */
-
-include_once 'fvc_blog_posts.features.inc';
