@@ -52,6 +52,11 @@
  * @see conf_path()
  */
 
+// @see example.settings.local.php in sites/default for example.
+if (file_exists('sites/default/settings.local.php')) {
+  require 'sites/default/settings.local.php';
+}
+
 /**
  * Database settings:
  *
