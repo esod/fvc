@@ -550,6 +550,21 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  */
 # $conf['allow_authorize_operations'] = FALSE;
 
+/**
+ * Permits sessions to work across www and the apex (aka naked) domain.
+ */
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
+  if ($_SERVER['HTTP_HOST'] == 'forwardvisioncoaching.net' || $_SERVER['HTTP_HOST'] == 'live-fvc2.gotpantheon.com') {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: http://www.forwardvisioncoaching.net' . $_SERVER['REQUEST_URI']);
+  }
+  if ($_SERVER['REQUEST_URI'] == 'http://forwardvisioncoaching.com' || $_SERVER['REQUEST_URI'] == 'http://www.forwardvisioncoaching.com') {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: http://www.forwardvisioncoaching.net');
+    exit();
+  }
+}
+
 // @see example.settings.local.php in sites/default for example.
 if (file_exists('sites/default/settings.local.php')) {
   require 'sites/default/settings.local.php';
