@@ -51,12 +51,6 @@
  * @see example.sites.php
  * @see conf_path()
  */
-
-// @see example.settings.local.php in sites/default for example.
-if (file_exists('sites/default/settings.local.php')) {
-  require 'sites/default/settings.local.php';
-}
-
 /**
  * Database settings:
  *
@@ -555,3 +549,8 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * Remove the leading hash signs to disable.
  */
 # $conf['allow_authorize_operations'] = FALSE;
+
+// @see example.settings.local.php in sites/default for example.
+if (file_exists('sites/default/settings.local.php')) {
+  require 'sites/default/settings.local.php';
+}

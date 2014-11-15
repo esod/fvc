@@ -15,6 +15,7 @@ function custom_page_user_default_permissions() {
     'name' => 'create page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
     ),
     'module' => 'node',
   );
@@ -24,6 +25,7 @@ function custom_page_user_default_permissions() {
     'name' => 'delete any page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
     ),
     'module' => 'node',
   );
@@ -33,6 +35,7 @@ function custom_page_user_default_permissions() {
     'name' => 'delete own page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
     ),
     'module' => 'node',
   );
@@ -42,6 +45,7 @@ function custom_page_user_default_permissions() {
     'name' => 'edit any page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
     ),
     'module' => 'node',
   );
@@ -51,6 +55,7 @@ function custom_page_user_default_permissions() {
     'name' => 'edit own page content',
     'roles' => array(
       'administrator' => 'administrator',
+      'site administrator' => 'site administrator',
     ),
     'module' => 'node',
   );
