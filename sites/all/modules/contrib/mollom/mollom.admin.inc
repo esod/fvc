@@ -244,6 +244,11 @@ function mollom_admin_configure_form($form, &$form_state, $mollom_form = NULL) {
   $form['actions'] = array(
     '#type' => 'actions',
   );
+  $form['#attached'] = array(
+    'js' => array(
+      drupal_get_path('module', 'mollom') . '/mollom.admin.js',
+    ),
+  );
 
   switch ($form_state['storage']['step']) {
     case 'select':
@@ -426,11 +431,14 @@ function mollom_admin_configure_form($form, &$form_state, $mollom_form = NULL) {
         '#title' => t('When text analysis identifies spam'),
         '#default_value' => $mollom_form['discard'],
         '#options' => array(
-          1 => t('!option <em>(!recommended)</em>', array(
+          1 => t('!option <em class="mollom-recommended">(!recommended)</em>', array(
             '!option' => t('Discard the post'),
             '!recommended' => $recommended,
           )),
-          0 => t('Retain the post for manual moderation'),
+          0 => t('!option <em class="mollom-recommended">(!recommended)</em>', array(
+            '!option' => t('Retain the post for manual moderation'),
+            '!recommended' => $recommended,
+          )),
         ),
         '#required' => $mollom_form['mode'] == MOLLOM_MODE_ANALYSIS,
         // Only possible for forms supporting moderation of unpublished posts.
@@ -546,7 +554,12 @@ function mollom_admin_configure_form_submit($form, &$form_state) {
     drupal_set_message(t('The form protection has been updated.'));
   }
 
-  $form_state['redirect'] = 'admin/config/content/mollom';
+  if (!empty($mollom_form['discard']) && !empty($mollom_form['moderation'])) {
+    drupal_set_message(t('Spam that is discarded cannot be moderated from the Mollom Content Moderation Platform.'), 'warning');
+  }
+  else {
+    $form_state['redirect'] = 'admin/config/content/mollom';
+  }
 }
 
 /**
@@ -941,6 +954,7 @@ function mollom_admin_settings($form, &$form_state) {
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
+  // Lower severity numbers indicate a high severity level.
   $min_severity = variable_get('mollom_log_minimum_severity', WATCHDOG_WARNING);
   $form['mollom_advanced']['mollom_log_minimum_severity'] = array(
     '#type' => 'radios',
@@ -949,7 +963,7 @@ function mollom_admin_settings($form, &$form_state) {
       WATCHDOG_WARNING => t('Only log warnings and errors'),
       WATCHDOG_DEBUG => t('Log all Mollom messages'),
     ),
-    '#default_value' => variable_get('mollom_log_minimum_severity', WATCHDOG_WARNING),
+    '#default_value' => $min_severity <= WATCHDOG_WARNING ? WATCHDOG_WARNING : WATCHDOG_DEBUG,
   );
   $form['mollom_advanced']['mollom_audio_captcha_enabled'] = array(
     '#type' => 'checkbox',
