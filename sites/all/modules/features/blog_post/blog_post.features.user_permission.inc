@@ -39,6 +39,15 @@ function blog_post_user_default_permissions() {
     'module' => 'context_ui',
   );
 
+  // Exported permission: 'administer simplify'.
+  $permissions['administer simplify'] = array(
+    'name' => 'administer simplify',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplify',
+  );
+
   // Exported permission: 'administer views cache bully'.
   $permissions['administer views cache bully'] = array(
     'name' => 'administer views cache bully',
@@ -142,6 +151,15 @@ function blog_post_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'comment',
+  );
+
+  // Exported permission: 'view hidden fields'.
+  $permissions['view hidden fields'] = array(
+    'name' => 'view hidden fields',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'simplify',
   );
 
   return $permissions;
