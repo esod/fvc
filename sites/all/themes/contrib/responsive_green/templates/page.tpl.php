@@ -83,7 +83,7 @@
 </div>
 <div class="clear"></div>
   </header>
-  
+
 <div class="menu_wrapper">
   <nav id="main-menu"  role="navigation">
     <a class="nav-toggle" href="#">Navigation</a>
@@ -114,7 +114,7 @@
       if ($result == 2):$value = "two";endif;
       if ($result == 3):$value = "three";endif;
       ?>
-     <?php if ($page['top_first'] || $page['top_second'] || $page['top_third']): ?> 
+     <?php if ($page['top_first'] || $page['top_second'] || $page['top_third']): ?>
      <div id="top-area" class="clearfix <?php print $value ?>">
       <?php if ($page['top_first']): ?>
         <div class="column"><?php print render($page['top_first']); ?></div>
@@ -168,7 +168,7 @@
         if ($result1 == 2):$value1 = "two";endif;
         if ($result1 == 3):$value1 = "three";endif;
   ?>
-  <?php if ($page['footer_first'] || $page['footer_second'] || $page['footer_third']): ?> 
+  <?php if ($page['footer_first'] || $page['footer_second'] || $page['footer_third']): ?>
     <div id="footer-area" class="clearfix <?php print $value1 ?>">
       <?php if ($page['footer_first']): ?>
       <div class="column"><?php print render($page['footer_first']); ?></div>
@@ -182,7 +182,7 @@
     </div>
   <?php endif; ?>
 </div>
-  
+
   <div class="footer_credit">
     <div class="footer_inner_credit">
     <?php if ($page['footer']): ?>
@@ -196,7 +196,7 @@
     <div class="copyright-wrapper">
       <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print $site_name; ?> </p> <p class="credits"> <?php print t('Toll Free: 1-855-441-8963'); ?></p>
       <div class="clear"></div>
-      <p class="copyright second-line"><?php print t('Hackensack, NJ 07601-2589'); ?></p> <p class="credits"> <a href="mailto:lynn@forwardvisioncoaching.com" target="_self">lynn@forwardvisioncoaching.com</a></p>
+      <p class="copyright second-line"><?php print t('Hackensack, NJ 07601-2589'); ?></p> <p class="credits"> <a href="mailto:lynn@forwardvisioncoaching.net" target="_self">lynn@forwardvisioncoaching.net</a></p>
       <div class="clear"></div>
     </div>
     </div>
