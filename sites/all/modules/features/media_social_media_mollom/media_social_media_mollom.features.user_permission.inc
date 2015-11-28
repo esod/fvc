@@ -28,15 +28,6 @@ function media_social_media_mollom_user_default_permissions() {
     'module' => 'media_internet',
   );
 
-  // Exported permission: 'administer media'.
-  $permissions['administer media'] = array(
-    'name' => 'administer media',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'media',
-  );
-
   // Exported permission: 'administer mollom'.
   $permissions['administer mollom'] = array(
     'name' => 'administer mollom',
@@ -62,35 +53,6 @@ function media_social_media_mollom_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'mollom',
-  );
-
-  // Exported permission: 'edit media'.
-  $permissions['edit media'] = array(
-    'name' => 'edit media',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'media',
-  );
-
-  // Exported permission: 'import media'.
-  $permissions['import media'] = array(
-    'name' => 'import media',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'media',
-  );
-
-  // Exported permission: 'view media'.
-  $permissions['view media'] = array(
-    'name' => 'view media',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'media',
   );
 
   return $permissions;

@@ -11,6 +11,7 @@ dependencies[] = contextual
 dependencies[] = custom_page
 dependencies[] = features
 dependencies[] = node
+dependencies[] = pathauto_metatag_settings
 dependencies[] = simplify
 dependencies[] = strongarm
 dependencies[] = taxonomy
