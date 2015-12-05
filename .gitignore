@@ -4,8 +4,9 @@
 /files/*
 /cache
 
-# Ignore local settings.
+# Ignore settings files.
 /sites/default/settings.local.php
+settings.php
 
 # ** Only works in OSs that support newer versions of fnmatch (Bash 4+)
 /sites/default/**/files
@@ -44,3 +45,7 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
+
+# FTP USER #
+###########
+/esod
