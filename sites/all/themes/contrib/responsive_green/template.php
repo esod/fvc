@@ -77,81 +77,16 @@ function responsive_green_preprocess_page(&$vars) {
   $vars['theme_path_social'] = base_path() . drupal_get_path('theme', 'responsive_green');
   $vars['display'] = theme_get_setting('display', 'responsive_green');
   $vars['sdisplay'] = theme_get_setting('sdisplay', 'responsive_green');
-
-  //Initialize slideshow using theme settings
-  //$vars['effect'] = theme_get_setting('slideshow_effect', 'responsive_green'); //Wait for fade bug to be resolved
-  $vars['slideshow_direction'] = theme_get_setting('slideshow_direction','responsive_green');
-  $vars['effect_time'] = theme_get_setting('slideshow_effect_time','responsive_green')*1000;
-  $vars['slideshow_controls'] = theme_get_setting('slideshow_controls','responsive_green');
-  $vars['slideshow_random'] = theme_get_setting('slideshow_random','responsive_green');
-  $vars['slideshow_pause'] = theme_get_setting('slideshow_pause','responsive_green');
-  $vars['slideshow_touch'] = theme_get_setting('slideshow_touch','responsive_green');
-
-  // The images. TODO: move into a custom module
-  $vars['img1'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/road-closed-ahead-lo.jpg';
-  $vars['img2'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/lifereimagined.jpg';
-  $vars['img3'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/vision-life-different.jpg';
-  $vars['img4'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/steps-to-setting-goals.jpg';
-  
-  // Pass the slideshow settings to Drupal.settings
-  drupal_add_js(array(
-    'custom_slideshow' => array(
-      //'effect' => $effect, // Wait for fade bug to be resolved
-      'slideshow_direction' => $vars['slideshow_direction'],
-      'effect_time' => $vars['effect_time'],
-      'slideshow_controls' => $vars['slideshow_controls'],
-      'slideshow_random' => $vars['slideshow_random'],
-      'slideshow_pause' => $vars['slideshow_pause'],
-      'slideshow_touch' => $vars['slideshow_touch']
-    )
-  ), 'setting');
-
+  $vars['img1'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/slide-image-1.jpg';
+  $vars['img2'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/slide-image-2.jpg';
+  $vars['img3'] = base_path() . drupal_get_path('theme', 'responsive_green') . '/images/slide-image-3.jpg';
 }
-
-function responsive_green_button($variables) {
-	$button_color = theme_get_setting('button_color','responsive_green');
-	if($button_color == '') {
-		$button_classes = '';
-	} else {
-		$button_classes = ' button small round ';
-	}	
-	$element = $variables['element'];
-	$element['#attributes']['type'] = 'submit';
-	element_set_attributes($element, array('id', 'name', 'value'));
-
-	$element['#attributes']['class'][] = 'form-' . $element['#button_type'] . $button_classes . $button_color;
-	if (!empty($element['#attributes']['disabled'])) {
-	$element['#attributes']['class'][] = 'form-button-disabled';
-	}
-
-	return '<input' . drupal_attributes($element['#attributes']) . ' />';
-}
-
 /**
- * Override or insert variables for the page templates.
+ * Add Google Fonts.
  */
 function responsive_green_preprocess_html(&$variables) {
-  // Add the Google fonts.
-  drupal_add_css('http://fonts.googleapis.com/css?family=Vollkorn:400italic,400,700', array('type' => 'external'));
-  drupal_add_css('http://fonts.googleapis.com/css?family=Oxygen:400,700', array('type' => 'external'));
-  
-  // Add the default style sheets
-  drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/style.css', array('group' => CSS_THEME, 'weight' => 120));
-  drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/media.css', array('group' => CSS_THEME, 'weight' => 121));
-  
-  // Add styles for theme color schemes.
-  if (!(theme_get_setting('theme_color','responsive_green') == '')) {
-    $theme_color = theme_get_setting('theme_color','responsive_green');
-    drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/color-schemes/' . $theme_color . '/' . $theme_color . '-style.css', array('group' => CSS_THEME, 'weight' => 122));
-    drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/color-schemes/' . $theme_color . '/' . $theme_color . '-media.css', array('group' => CSS_THEME, 'weight' => 123));
-  }
-  
-  /**
-   * Add files for custom buttons.
-   */
-  if (!(theme_get_setting('button_color','responsive_green') == '')) {
-    drupal_add_css(drupal_get_path('theme', 'responsive_green') . '/css/buttons.css', array('group' => CSS_THEME, 'weight' => 124));
-  }
+  drupal_add_css('http://fonts.googleapis.com/css?family=Vollkorn', array('type' => 'external'));
+  drupal_add_css('http://fonts.googleapis.com/css?family=Dancing+Script', array('type' => 'external'));
 }
 
 /**

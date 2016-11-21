@@ -74,14 +74,6 @@
  * @see template_process()
  */
 ?>
-<?php //if(module_exists('devel')){dpm($node);} ?>
-<?php //if(module_exists('devel')){dpm($content);} ?>
-<?php hide($content['field_image']); ?>
-<?php hide($content['body']); ?>
-
-<div class="image-with-caption"><?php print render($content['field_image']); ?></div>
-<div class="fvc-body"><?php print render($content['body']); ?></div>
-
 <?php if (!$page): ?>
   <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 <?php endif; ?>
@@ -108,11 +100,10 @@
     ?></div>
   <?php if (!empty($content['links'])): ?>
     <footer>
-      <?php /*print render($content['links']);*/ ?>
+      <?php print render($content['links']); ?>
     </footer>
   <?php endif; ?>
   <?php print render($content['comments']); ?>
 <?php if (!$page): ?>
   </article> <!-- /.node -->
 <?php endif; ?>
-

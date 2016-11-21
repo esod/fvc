@@ -22,7 +22,6 @@
 <div id="wrapper">
   <header id="header" role="banner">
     <?php if ($logo): ?><div id="logo"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><img src="<?php print $logo; ?>"/></a></div><?php endif; ?>
-    <h1 id="site-title"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a></h1>
     <div id="site-description"><?php print $site_slogan; ?></div>
     <div class="clear"></div>
   </header>
