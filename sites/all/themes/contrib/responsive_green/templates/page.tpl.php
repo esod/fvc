@@ -64,51 +64,46 @@
  * @see template_process()
  */
 ?>
-
 <div id="header_wrapper">
   <header id="header" role="banner">
     <?php if ($logo): ?><div id="logo"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><img src="<?php print $logo; ?>"/></a></div>
     <?php endif; ?>
-    <h1 id="site-title"><div id="site-description"><?php print $site_slogan; ?></div></h1>
+    <?php if ($site_slogan): ?><h1 id="site-title"><div id="site-description"><?php print $site_slogan; ?></div></h1>
+    <?php endif; ?>
       <?php if ($display): ?>
-         <div id="socialbar">
-            <ul class="social">
+        <div id="socialbar">
+          <ul class="social">
             <?php $options['attributes'] = array('target' => '_blank'); ?>
             <?php if ($facebook): ?><li class="fb"><?php print l(t(''), $facebook, $options); ?></li> <?php endif; ?>
             <?php if ($twitter): ?><li class="tw"><?php print l(t(''), $twitter, $options); ?></li> <?php endif; ?>
             <?php if ($linkedin): ?><li class="ln"><?php print l(t(''), $linkedin, $options); ?></li> <?php endif; ?>
-            </ul>
-          </div>
-        <?php endif; ?>
+          </ul>
         </div>
-      </div>
-    <div class="clear"></div>
-  </header>
-  <div class="menu_wrapper">
-      <nav id="main-menu"  role="navigation">
-        <a class="nav-toggle" href="#">Navigation</a>
-        <div class="menu-navigation-container">
-          <?php print drupal_render($main_menu_tree); ?>
-        <div class="clear"></div>
-      </nav><!-- end main-menu -->
-  </div>
+      <?php endif; ?>
 </div>
+<div class="clear"></div>
+  </header>
+
+<div class="menu_wrapper">
+  <nav id="main-menu"  role="navigation">
+    <a class="nav-toggle" href="#">Navigation</a>
+    <div class="menu-navigation-container">
+      <?php print drupal_render($main_menu_tree); ?>
+    <div class="clear"></div>
+  </nav><!-- end main-menu -->
+    </div>
+</div>
+
 <div id="container">
-    <?php if ($is_front): ?>
+  <?php if ($is_front): ?>
     <?php if ($sdisplay): ?>
     <div id="home-slider">
-      <div class="flexslider-container">
-        <div id="single-post-slider" class="flexslider">
-          <ul class="slides">
-            <li class="slide" style="display:none;"><img src="<?php print $img1;?>"alt="Slide1"/></li>
-            <li class="slide" style="display:none;"><img src="<?php print $img2;?>"alt="Slide2"/></li>
-            <li class="slide" style="display:none;"><img src="<?php print $img3;?>" alt="Slide3"/></li>
-          </ul><!-- /slides -->
-        </div><!-- /flexslider -->
-      </div>
+      <?php
+        $block = module_invoke('nivo_slider', 'block_view', 'nivo_slider');
+        print render ($block);
+      ?>
     </div>
     <?php endif; ?>
-    <div class="Slideshow-region"><?php print render($page['slideshow']); ?></div>
     <?php if (!empty($page['top_first'])): $num1 = 1;  endif; ?>
     <?php if (!empty($page['top_second'])): $num2 = 1;  endif; ?>
     <?php if (!empty($page['top_third'])): $num3 = 1;  endif; ?>
@@ -119,7 +114,7 @@
       if ($result == 2):$value = "two";endif;
       if ($result == 3):$value = "three";endif;
       ?>
-     <?php if ($page['top_first'] || $page['top_second'] || $page['top_third']): ?> 
+     <?php if ($page['top_first'] || $page['top_second'] || $page['top_third']): ?>
      <div id="top-area" class="clearfix <?php print $value ?>">
       <?php if ($page['top_first']): ?>
         <div class="column"><?php print render($page['top_first']); ?></div>
@@ -130,29 +125,29 @@
         <?php if ($page['top_third']): ?>
         <div class="column"><?php print render($page['top_third']); ?></div>
       <?php endif; ?>
-      </div>
+    </div>
     <?php endif; ?>
     <?php endif; ?>
     <div class="content-sidebar-wrap">
-    <div id="content">
-      <?php if (theme_get_setting('breadcrumbs', 'responsive_green')): ?><div id="breadcrumbs"><?php if ($breadcrumb): print $breadcrumb; endif;?></div><?php endif; ?>
-      <section id="post-content" role="main">
-        <?php print $messages; ?>
-        <?php if ($page['content_top']): ?><div id="content_top"><?php print render($page['content_top']); ?></div><?php endif; ?>
-        <?php print render($title_prefix); ?>
-        <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
-        <?php print render($title_suffix); ?>
-        <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>
-        <?php print render($page['help']); ?>
-        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-        <?php print render($page['content']); ?>
-      </section> <!-- /#main -->
-    </div>
-    <?php if ($page['sidebar_first']): ?>
-      <aside id="sidebar-first" role="complementary">
-        <?php print render($page['sidebar_first']); ?>
-      </aside>  <!-- /#sidebar-first -->
-    <?php endif; ?>
+      <div id="content">
+        <?php if (theme_get_setting('breadcrumbs', 'responsive_green')): ?><div id="breadcrumbs"><?php if ($breadcrumb): print $breadcrumb; endif;?></div><?php endif; ?>
+        <section id="post-content" role="main">
+          <?php print $messages; ?>
+          <?php if ($page['content_top']): ?><div id="content_top"><?php print render($page['content_top']); ?></div><?php endif; ?>
+          <?php print render($title_prefix); ?>
+          <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
+          <?php print render($title_suffix); ?>
+          <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>
+          <?php print render($page['help']); ?>
+          <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+          <?php print render($page['content']); ?>
+        </section> <!-- /#main -->
+      </div>
+      <?php if ($page['sidebar_first']): ?>
+        <aside id="sidebar-first" role="complementary">
+          <?php print render($page['sidebar_first']); ?>
+        </aside>  <!-- /#sidebar-first -->
+      <?php endif; ?>
     </div>
     <?php if ($page['sidebar_second']): ?>
       <aside id="sidebar-second" role="complementary">
@@ -160,32 +155,34 @@
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
 </div>
+
 <div id="footer">
   <div id="footer_wrapper">
   <?php if (!empty($page['footer_first'])): $num01 = 1;  endif; ?>
-      <?php if (!empty($page['footer_second'])): $num02 = 1;  endif; ?>
-      <?php if (!empty($page['footer_third'])): $num03 = 1;  endif; ?>
-      <?php
-        $sum1 = (isset($num01) . isset($num02) . isset($num03));
-        $result1 = strlen($sum1);
-          if ($result1 == 1):$value1 = "one";endif;
-          if ($result1 == 2):$value1 = "two";endif;
-          if ($result1 == 3):$value1 = "three";endif;
-      ?>
-    <?php if ($page['footer_first'] || $page['footer_second'] || $page['footer_third']): ?> 
-      <div id="footer-area" class="clearfix <?php print $value1 ?>">
-        <?php if ($page['footer_first']): ?>
-        <div class="column"><?php print render($page['footer_first']); ?></div>
-        <?php endif; ?>
-        <?php if ($page['footer_second']): ?>
-        <div class="column"><?php print render($page['footer_second']); ?></div>
-        <?php endif; ?>
-        <?php if ($page['footer_third']): ?>
-        <div class="column"><?php print render($page['footer_third']); ?></div>
-        <?php endif; ?>
-      </div>
-    <?php endif; ?>
-  </div>
+    <?php if (!empty($page['footer_second'])): $num02 = 1;  endif; ?>
+    <?php if (!empty($page['footer_third'])): $num03 = 1;  endif; ?>
+    <?php
+      $sum1 = (isset($num01) . isset($num02) . isset($num03));
+      $result1 = strlen($sum1);
+        if ($result1 == 1):$value1 = "one";endif;
+        if ($result1 == 2):$value1 = "two";endif;
+        if ($result1 == 3):$value1 = "three";endif;
+  ?>
+  <?php if ($page['footer_first'] || $page['footer_second'] || $page['footer_third']): ?>
+    <div id="footer-area" class="clearfix <?php print $value1 ?>">
+      <?php if ($page['footer_first']): ?>
+      <div class="column"><?php print render($page['footer_first']); ?></div>
+      <?php endif; ?>
+      <?php if ($page['footer_second']): ?>
+      <div class="column"><?php print render($page['footer_second']); ?></div>
+      <?php endif; ?>
+      <?php if ($page['footer_third']): ?>
+      <div class="column"><?php print render($page['footer_third']); ?></div>
+      <?php endif; ?>
+    </div>
+  <?php endif; ?>
+</div>
+
   <div class="footer_credit">
     <div class="footer_inner_credit">
     <?php if ($page['footer']): ?>
@@ -194,8 +191,14 @@
       </div>
    <?php endif; ?>
     <div id="copyright">
-     <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print $site_name; ?> </p> <p class="credits"> <?php print t('Designed and developed by'); ?>  <a href="http://about.me/ankithinglajia" target="_blank">Ankit Hinglajia</a></p>
-    <div class="clear"></div>
+      24 Hours a Day, Seven Days a Week&nbsp;&bull;&nbsp;Proudly Serving the Nation<br>
+      Free 30-Minute Coaching Session Available<br>
+    <div class="copyright-wrapper">
+      <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print $site_name; ?> </p> <p class="credits"> <?php print t('Toll Free: 1-855-441-8963'); ?></p>
+      <div class="clear"></div>
+      <p class="copyright second-line"><?php print t('Hackensack, NJ 07601-2589'); ?></p> <p class="credits"> <a href="mailto:lynn@forwardvisioncoaching.net" target="_self">lynn@forwardvisioncoaching.net</a></p>
+      <div class="clear"></div>
+    </div>
     </div>
   </div>
   </div>

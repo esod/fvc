@@ -1,0 +1,179 @@
+/* ---------------------------------------------------------------------- */
+/* Purple
+/* 
+/* Menu color: #E64135 ;
+/* ---------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------- */
+/* COLORS 
+/* ---------------------------------------------------------------------- */
+
+a {
+  color: #E64135;
+  text-decoration: none;
+}
+
+#site-title a,
+#site-description {
+  color: #E64135;
+  font-weight: 300;
+}
+
+.menu_wrapper {
+  background-color: #E64135;
+  border-bottom: 0 solid #E64135;
+  border-top: 0 solid #E64135;
+  display: block;
+  margin-bottom: 15px;
+  padding: 13px 0 14px;
+  position: relative;
+  z-index: 99;
+}
+
+#site-title a,
+#site-description {
+  color: #E64135;
+  font-weight: 300;
+}
+
+#site-description {
+  clear: both;
+  color: #E64135;
+  float: left;
+  font-size: 20px;
+  line-height: 100%;
+  margin: 16px 0 0;
+}
+
+#main-menu a:hover,
+#main-menu li > a.active,
+#main-menu li > a.active-trail {
+  background: none repeat scroll 0 0 #ffffff;
+  color: #E64135;
+  text-decoration: none;
+}
+
+.drop-down-toggle {
+  position: absolute;
+  top: 7px;
+  right: 16px;
+  display: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  border: #ffffff 3px solid;
+}
+
+.drop-down-arrow {
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 8px 0 0 5px;
+  border-top: 5px solid #ffffff;
+  border-left: transparent 5px solid;
+  border-right: transparent 5px solid;
+}
+
+#socialbar .social .fb a {
+  background: url("images/fb.gif") no-repeat scroll center center transparent;
+  display: inline-block;
+  height: 64px;
+  padding: 0 5px 0 0;
+  width: 64px;
+  opacity: 0.5;
+}
+
+#socialbar .social .tw a {
+  background: url("images/tw.gif") no-repeat scroll center center transparent;
+  display: inline-block;
+  height: 64px;
+  padding: 0 5px 0 0;
+  width: 64px;
+  opacity: 0.5;
+}
+
+#socialbar .social .ln a {
+  background: url("images/in.gif") no-repeat scroll center center transparent;
+  display: inline-block;
+  height: 64px;
+  padding: 0 5px 0 0;
+  width: 64px;
+  opacity: 0.5;
+}
+
+#main-menu li li a  {
+  background: none repeat scroll 0 0 #E64135;
+  border: 1px solid #343434;
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0;
+  min-width: 150px;
+  overflow: hidden;
+  padding: 4% 5%;
+  text-align: left;
+}
+
+#main-menu li li a:hover {
+  background: #343434;
+  color: #fff;
+}
+
+#main-menu ul.menu li {
+  margin: 0 3px 0 0;
+}
+
+.flex-control-nav li a.flex-active,
+.flex-control-nav li a:hover  {
+  background: none repeat scroll 0 0 #E64135;
+  color: #c24050;
+}
+
+.links li a {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background: #E64135;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: normal;
+  padding: 4px 8px;
+  display: inline-block;
+  margin-bottom: 1px;
+}
+
+.links li a:hover {
+  background: #b45fa9;
+  color: #ddd;
+}
+
+.footer-menu ul li a:hover {
+  color: #b45fa9;
+}
+.footer-menu li a.active {
+  color: #E64135;
+}
+#footer {
+  clear: both;
+  color: rgb(34, 34, 34);
+  background: none repeat scroll 0 0 #E64135;
+  border-top: 1px solid #cfd7db;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Images 
+/* ---------------------------------------------------------------------- */
+q {
+  background: #d8d8d8 url("../../../images/quote.png") no-repeat;
+}
+.field-name-field-tags a{
+  background: url("../../../images/tag.png") no-repeat;
+}
+#forum td.forum .icon, #forum .icon div {
+  background: url("../../../images/no-new-posts.png") no-repeat;
+}
+.comment .comment-arrow {
+  background: url("../../../images/comment-arrow.gif") no-repeat 0 center transparent;
+}
+#search-block-form input.form-submit,
+#search-form input.form-submit {
+  background: url("../../../images/search-button.png") no-repeat center top;
+}

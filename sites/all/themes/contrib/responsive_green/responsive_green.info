@@ -1,5 +1,5 @@
 name = Responsive Green
-description = A Responsive Corporate theme.<br/> Developed by <a href="http://www.about.me/ankithinglajia">Ankit Hinglajia.</a>
+description = A Responsive theme.
 core = 7.x
 engine = phptemplate
 
@@ -10,15 +10,14 @@ stylesheets[all][] = css/media.css
 
 ; SCRIPTS
 ;----------------------------------------------------
+;scripts[] = js/flexslider-min.js
 scripts[] = js/menu.js
-scripts[] = js/flexslider-min.js
-scripts[] = js/slide.js
+;scripts[] = js/slide.js
 
 ; REGIONS
 ;----------------------------------------------------
 regions[sidebar_first]  = First Sidebar
 regions[sidebar_second] = Second Sidebar
-regions[slideshow]      = Slideshow
 regions[top_first]      = Header First
 regions[top_second]     = Header Second
 regions[top_third]      = Header Third
@@ -45,14 +44,27 @@ features[] = secondary_menu
 ;----------------------------------------------------
 settings[breadcrumbs]  = 1
 settings[display]      = 1
-settings[sdisplay]     = 1
-settings[twitter]      = "https://twitter.com/ankithinglajia"
-settings[facebook]     = "http://www.facebook.com/ankithinglajia"
-settings[linkedin]     = "http://in.linkedin.com/in/ankithinglajia"
+settings[sdisplay]      = 1
+settings[twitter]      = "https://twitter.com/LynnZimmering"
+settings[facebook]     = "http://www.facebook.com/lynn.zimmering"
+settings[linkedin]     = "http://in.linkedin.com/in/lynnzimmering"
 
-; Information added by Drupal.org packaging script on 2014-05-02
-version = "7.x-1.7"
+settings[slideshow_js]= 1
+;settings[slideshow_effect]='slide'
+settings[slideshow_direction]='horizontal'
+settings[slideshow_effect_time]='5'
+settings[slideshow_random]= 0
+settings[slideshow_controls]= 1
+settings[slideshow_pause]= 1
+settings[slideshow_touch]= 1
+settings[theme_color]= 'default'
+settings[button_color]= 'default'
+
+
+
+; Information added by drupal.org packaging script on 2013-07-01
+version = "7.x-1.2"
 core = "7.x"
 project = "responsive_green"
-datestamp = "1399016032"
+datestamp = "1372681551"
 
